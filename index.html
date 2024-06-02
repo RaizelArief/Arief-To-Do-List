@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochammad Arief Abbyan X RPL 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="navbar">
+            <div class="tulisan">
+                <h1>Selamat datang</h1>
+            </div>
+
+            <div class="gambar">
+                <img src="profile.png" alt="">
+                <p>Mochammad Arief Abbyan</p>
+            </div>
+
+            <button id="logout-button">
+                Logout
+            </button>
+
+        </div>
+        <hr>
+
+        <div class="list">
+            <header>
+                <p>To Do List</p>
+            </header>
+
+
+            <main class="op" id="submit">
+                <p> list saya </p>
+                <input type="text" placeholder="Ayo isi" name="nama">
+            </main>
+
+
+            <main class="button">
+                <button class="input" id="Input-button">
+                    Input
+                </button>
+                <button class="delete">
+                    Delete
+                </button>
+            </main>
+        </div>
+        <div class="footer">
+            <h1 id="tasks"> Selamat menikmati 😊</h1>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded",
+            function () {
+                document.getElementById("Input-button").addEventListener("click", function () {
+                    var inputText = document.querySelector("input[name=nama]").value;
+                    if (inputText.trim() !== "") {
+                        var newItem = document.createElement("p");
+                        newItem.textContent = inputText;
+                        document.querySelector(".op").appendChild(newItem);
+                        document.querySelector("input[name=nama]").value = "";
+                    }
+                });
+            });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var logoutButton = document.getElementById("logout-button");
+
+            logoutButton.addEventListener("click", function () {
+                alert("Anda telah berhasil logout.");
+                window.location.href = ("login.html");
+            });
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fungsi untuk menangani penghapusan item dari daftar
+            document.querySelector(".delete").addEventListener("click", function () {
+                var list = document.querySelector(".op");
+                if (list.childNodes.length > 1) { // Pastikan ada item yang dapat dihapus
+                    list.removeChild(list.lastChild);
+                } else {
+                    alert("Tidak ada item yang dapat dihapus.");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

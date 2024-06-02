@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 1px;
+    background-color: blueviolet;
+    background-image: url(back.jpeg);
+  }
+  h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    display: grid;
+    place-items: center;
+    height: 10vh;
+  }
+
+  .nav {
+    margin: 4px;
+    padding: 4px;
+  }
+  .navbar {
+    background-color: rgb(73, 16, 128);
+    padding: 3px;
+    margin: 10px;
+    margin-top: 100px;
+    width: 200px;
+    height: 205px;
+    border-radius: 30px;
+  }
