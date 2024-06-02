@@ -14,12 +14,6 @@
             <div class="tulisan">
                 <h1>Selamat datang</h1>
             </div>
-
-            <div class="gambar">
-                <img src="profile.png" alt="">
-                <p>Mochammad Arief Abbyan</p>
-            </div>
-
             <button id="logout-button">
                 Logout
             </button>
@@ -78,6 +72,7 @@
 
 
         document.addEventListener("DOMContentLoaded", function () {
+            const username = document.getElementById("username");
             // Fungsi untuk menangani penghapusan item dari daftar
             document.querySelector(".delete").addEventListener("click", function () {
                 var list = document.querySelector(".op");
